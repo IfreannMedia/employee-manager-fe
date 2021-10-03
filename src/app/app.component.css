@@ -29,3 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: #707070;
 }
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
