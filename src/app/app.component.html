@@ -22,7 +22,7 @@
       <div class="card m-b-30">
         <div class="card-body row">
           <div class="col-6">
-            <a href=""><img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a>
+            <img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60">
           </div>
           <div class="col-6 card-title align-self-center mb-0">
             <ng-container *ngIf="employee && employee.name.length >= 11; else nameElse">
