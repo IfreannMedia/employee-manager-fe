@@ -1,0 +1,40 @@
+<div class="card m-b-30">
+  <div class="card-body row">
+    <div class="col-6">
+      <img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-60">
+    </div>
+    <div class="col-6 card-title align-self-center mb-0">
+      <ng-container *ngIf="employee && employee.name.length >= 11; else nameElse">
+        <ng-template #employeeNameTooltip>{{employee?.name}}</ng-template>
+        <h5 placement="top" class="ellipsis" [ngbTooltip]="employeeNameTooltip">{{employee?.name}}</h5>
+      </ng-container>
+      <ng-template #nameElse>
+        <h5 placement="top">{{employee?.name}}</h5>
+      </ng-template>
+
+      <ng-container *ngIf="employee && employee.jobTitle.length >= 14; else jobElse">
+        <ng-template #employeeJobTooltip>{{employee?.jobTitle}}</ng-template>
+        <p class="m-0" placement="top" class="ellipsis" [ngbTooltip]="employeeJobTooltip">{{employee?.jobTitle}}
+        </p>
+      </ng-container>
+      <ng-template #jobElse>
+        <p class="m-0" placement="top">{{employee?.jobTitle}}</p>
+      </ng-template>
+
+      <!-- <p class="m-0" data-toggle="tooltip" data-placement="right">{{employee?.jobTitle}}</p> -->
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a
+        href="#">{{employee?.email}}</a></li>
+    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee?.phoneNumber}}</li>
+  </ul>
+  <div class="card-body">
+    <div class="float-right btn-group btn-group-sm">
+      <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip"
+        data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+      <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip"
+        data-original-title="Delete"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+</div>
