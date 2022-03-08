@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeCardComponent
+    EmployeeCardComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
